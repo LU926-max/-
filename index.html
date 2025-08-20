@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>全台E貸通</title>
+
+  <!-- ✅ 主力標題 -->
+  <title>全台借款皆可辦｜全台E貸通 - 合法低利、快速撥款</title>
+
+  <!-- ✅ 搜尋結果描述 -->
+  <meta name="description" content="全台E貸通提供全台皆可承作的合法借款服務。小額借款、汽機車借款、代償高利貸皆可辦理。透明利率、快速撥款、全程保密，待業中也能核准，幫助您輕鬆解決資金需求。">
+
+  <!-- ✅ 社群分享（FB/LINE 等） -->
+  <meta property="og:title" content="全台借款皆可辦｜全台E貸通 - 合法低利、快速撥款">
+  <meta property="og:description" content="全台皆可承作｜合法透明、快速撥款、全程保密。小額借款、汽機車借款、代償高利貸皆可辦理。">
+  <meta property="og:type" content="website">
+  <!-- 如果你有網域就填完整網址，GitHub Pages 也可填公開網址 -->
+  <meta property="og:url" content="https://lu926-max.github.io/">
+  <!-- 建議 1200x630 圖片，先留空不影響功能 -->
+  <!-- <meta property="og:image" content="https://你的網域/og-image.jpg"> -->
+  <link rel="canonical" href="https://lu926-max.github.io/">
 
   <!-- Google Analytics 追蹤碼 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH85XVPBBE"></script>
@@ -14,23 +29,30 @@
     gtag('config', 'G-XH85XVPBBE');
   </script>
 
-  <!-- 防止 HTML 被快取 -->
+  <!-- 防止 HTML 被快取（可留可不留） -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color:#222; }
     header { background: #007bff; color: white; padding: 20px; text-align: center; }
     section { padding: 20px; max-width: 900px; margin: auto; }
     h2 { color: #333; margin-top: 30px; }
 
+    /* ✅ Hero 區塊（副標題集中呈現） */
+    .hero{max-width:960px;margin:24px auto 8px; padding: 24px 20px; text-align:center;}
+    .hero h1{font-size:28px;margin:0 0 6px}
+    .hero .sub{font-size:16px;opacity:.92;margin:0 0 12px}
+    .hero .bullets{list-style:none;padding:0;margin:8px 0 18px}
+    .hero .bullets li{margin:6px 0}
+
+    /* 原本的卡片區塊 */
     .services, .steps, .highlights { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
       gap: 10px; 
     }
-
     .box { 
       background: #f8f9fa; 
       padding: 15px; 
@@ -39,7 +61,6 @@
       font-size: 16px;
       font-weight: bold;
     }
-
     .steps .box { background: #e9f7ef; border-left: 5px solid #28a745; }
     .highlights .box { background: #fff3cd; border-left: 5px solid #ffc107; }
 
@@ -59,6 +80,11 @@
     }
     .cta h2 { color: white; margin-bottom: 15px; }
     .cta p { font-size: 18px; margin-bottom: 20px; }
+
+    @media (min-width:768px){
+      .hero h1{font-size:34px}
+      .hero .sub{font-size:18px}
+    }
   </style>
 </head>
 <body>
@@ -68,6 +94,22 @@
     <br>
     <a class="call-btn" data-href="tel:0965036978">📞 一鍵撥打電話</a>
   </header>
+
+  <!-- ✅ 新增：Hero 區塊，放 2–5 副標題 -->
+  <section class="hero">
+    <h1>全台借款皆可辦｜全台E貸通</h1>
+    <p class="sub">合法低利、快速撥款｜透明費用，全程保密</p>
+    <ul class="bullets">
+      <li>借款不限地區｜全台皆可承作・全程保密</li>
+      <li>小額借款・汽機車借款｜全台皆可辦理</li>
+      <li>全台合法借款｜待業可辦、同業多查可辦</li>
+      <li>全台借款平台｜透明利率、立即撥款</li>
+    </ul>
+    <div class="cta-group">
+      <a class="line-btn" data-href="https://page.line.me/656alxeh" target="_blank">＋ 立即加 LINE 諮詢</a>
+      <a class="call-btn" data-href="tel:0965036978">📞 立即撥打專線</a>
+    </div>
+  </section>
 
   <section>
     <h2>服務項目</h2>
@@ -121,33 +163,34 @@
     lu926-max.github.io
   </footer>
 
-  <!-- 🔑 自動日期版 一鍵更新腳本 -->
+  <!-- 🔑 改良版：只對 http/https 連結加版本參數；tel: 不加 -->
   <script>
-    const d = new Date();
-    const VERSION = d.getFullYear().toString() +
-                    ("0"+(d.getMonth()+1)).slice(-2) +
-                    ("0"+d.getDate()).slice(-2);
+    (function(){
+      const d = new Date();
+      const VERSION = d.getFullYear().toString() +
+                      ("0"+(d.getMonth()+1)).slice(-2) +
+                      ("0"+d.getDate()).slice(-2);
 
-    document.querySelectorAll('[data-href]').forEach(el => {
-      const url = el.getAttribute('data-href') + '?v=' + VERSION;
-      if (el.tagName === 'LINK') {
-        const real = document.createElement('link');
-        real.rel = el.rel || 'stylesheet';
-        real.href = url;
-        document.head.appendChild(real);
-      } else if (el.tagName === 'SCRIPT') {
-        const real = document.createElement('script');
-        real.src = url;
-        if (el.defer) real.defer = true;
-        document.body.appendChild(real);
-      } else if (el.tagName === 'A') {
-        el.href = url;
-      }
-    });
+      document.querySelectorAll('[data-href]').forEach(el => {
+        const raw = el.getAttribute('data-href');
+        if (!raw) return;
 
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      img.src = img.getAttribute('data-src') + '?v=' + VERSION;
-    });
+        // http/https → 加上 ?v= 版本；tel: / mailto: → 直接指定，不加版本
+        if (raw.startsWith('http://') || raw.startsWith('https://')) {
+          const url = raw + (raw.includes('?') ? '&' : '?') + 'v=' + VERSION;
+          el.setAttribute('href', url);
+        } else {
+          el.setAttribute('href', raw);
+        }
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        const src = img.getAttribute('data-src');
+        if (!src) return;
+        const url = src + (src.includes('?') ? '&' : '?') + 'v=' + VERSION;
+        img.src = url;
+      });
+    })();
   </script>
 </body>
 </html>
