@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
- <meta name="google-site-verification" content="rknj7nrO0Iyn0PZVsz_s_P-il8hjewu_iwNCpqCy-p4" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ 主力標題 -->
+  <!-- ✅ 網站標題 & 描述 -->
   <title>全台借款皆可辦｜全台E貸通 - 合法低利、快速撥款</title>
-
-  <!-- ✅ 搜尋結果描述 -->
   <meta name="description" content="全台E貸通提供全台皆可承作的合法借款服務。小額借款、汽機車借款、代償高利貸皆可辦理。透明利率、快速撥款、全程保密，待業中也能核准，幫助您輕鬆解決資金需求。">
 
-  <!-- ✅ 社群分享（FB/LINE 等） -->
-  <meta property="og:title" content="全台借款皆可辦｜全台E貸通 - 合法低利、快速撥款">
-  <meta property="og:description" content="全台皆可承作｜合法透明、快速撥款、全程保密。小額借款、汽機車借款、代償高利貸皆可辦理。">
-  <meta property="og:type" content="website">
-  <!-- 如果你有網域就填完整網址，GitHub Pages 也可填公開網址 -->
-  <meta property="og:url" content="https://lu926-max.github.io/">
-  <!-- 建議 1200x630 圖片，先留空不影響功能 -->
-  <!-- <meta property="og:image" content="https://你的網域/og-image.jpg"> -->
-  <link rel="canonical" href="https://lu926-max.github.io/">
+  <!-- ✅ Google Search Console 驗證標籤 -->
+  <meta name="google-site-verification" content="rknj7nrO0Iyn0PZVsz_s_P-il8hjewu_iwNCpqCy-p4" />
 
   <!-- Google Analytics 追蹤碼 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH85XVPBBE"></script>
@@ -30,25 +20,18 @@
     gtag('config', 'G-XH85XVPBBE');
   </script>
 
-  <!-- 防止 HTML 被快取（可留可不留） -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; color:#222; }
     header { background: #007bff; color: white; padding: 20px; text-align: center; }
     section { padding: 20px; max-width: 900px; margin: auto; }
     h2 { color: #333; margin-top: 30px; }
 
-    /* ✅ Hero 區塊（副標題集中呈現） */
     .hero{max-width:960px;margin:24px auto 8px; padding: 24px 20px; text-align:center;}
     .hero h1{font-size:28px;margin:0 0 6px}
     .hero .sub{font-size:16px;opacity:.92;margin:0 0 12px}
     .hero .bullets{list-style:none;padding:0;margin:8px 0 18px}
     .hero .bullets li{margin:6px 0}
 
-    /* 原本的卡片區塊 */
     .services, .steps, .highlights { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
@@ -96,7 +79,6 @@
     <a class="call-btn" data-href="tel:0965036978">📞 一鍵撥打電話</a>
   </header>
 
-  <!-- ✅ 新增：Hero 區塊，放 2–5 副標題 -->
   <section class="hero">
     <h1>全台借款皆可辦｜全台E貸通</h1>
     <p class="sub">合法低利、快速撥款｜透明費用，全程保密</p>
@@ -164,7 +146,6 @@
     lu926-max.github.io
   </footer>
 
-  <!-- 🔑 改良版：只對 http/https 連結加版本參數；tel: 不加 -->
   <script>
     (function(){
       const d = new Date();
@@ -176,7 +157,6 @@
         const raw = el.getAttribute('data-href');
         if (!raw) return;
 
-        // http/https → 加上 ?v= 版本；tel: / mailto: → 直接指定，不加版本
         if (raw.startsWith('http://') || raw.startsWith('https://')) {
           const url = raw + (raw.includes('?') ? '&' : '?') + 'v=' + VERSION;
           el.setAttribute('href', url);
