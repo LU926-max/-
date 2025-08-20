@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>全台E貸通</title>
 
+  <!-- Google Analytics 追蹤碼 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH85XVPBBE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XH85XVPBBE');
+  </script>
+
   <!-- 防止 HTML 被快取 -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -52,15 +61,6 @@
     .cta p { font-size: 18px; margin-bottom: 20px; }
   </style>
 </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XH85XVPBBE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XH85XVPBBE');
-</script>
 <body>
   <header>
     <h1>全台E貸通</h1>
@@ -123,13 +123,11 @@
 
   <!-- 🔑 自動日期版 一鍵更新腳本 -->
   <script>
-    // 產生 YYYYMMDD 當作版本號
     const d = new Date();
     const VERSION = d.getFullYear().toString() +
                     ("0"+(d.getMonth()+1)).slice(-2) +
                     ("0"+d.getDate()).slice(-2);
 
-    // link/script/a
     document.querySelectorAll('[data-href]').forEach(el => {
       const url = el.getAttribute('data-href') + '?v=' + VERSION;
       if (el.tagName === 'LINK') {
@@ -147,7 +145,6 @@
       }
     });
 
-    // img
     document.querySelectorAll('img[data-src]').forEach(img => {
       img.src = img.getAttribute('data-src') + '?v=' + VERSION;
     });
