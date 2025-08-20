@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>全台E貸通</title>
+
+  <!-- 防止 HTML 被快取 -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
     header { background: #007bff; color: white; padding: 20px; text-align: center; }
@@ -34,7 +40,6 @@
     .line-btn { background: #06C755; color: white; }
     .call-btn { background: #28a745; color: white; }
 
-    /* CTA 區塊 */
     .cta { 
       background: #007bff; 
       color: white; 
@@ -50,9 +55,9 @@
 <body>
   <header>
     <h1>全台E貸通</h1>
-    <a class="line-btn" href="https://page.line.me/656alxeh" target="_blank">＋ 一鍵加入 LINE 好友</a>
+    <a class="line-btn" data-href="https://page.line.me/656alxeh" target="_blank">＋ 一鍵加入 LINE 好友</a>
     <br>
-    <a class="call-btn" href="tel:0965036978">📞 一鍵撥打電話</a>
+    <a class="call-btn" data-href="tel:0965036978">📞 一鍵撥打電話</a>
   </header>
 
   <section>
@@ -96,16 +101,47 @@
     </p>
   </section>
 
-  <!-- CTA 區塊 -->
   <div class="cta">
     <h2>立即行動，不再等待！</h2>
     <p>專人快速回覆，讓您安心解決資金問題</p>
-    <a class="line-btn" href="https://page.line.me/656alxeh" target="_blank">＋ 立即加 LINE 諮詢</a>
-    <a class="call-btn" href="tel:0965036978">📞 立即撥打專線</a>
+    <a class="line-btn" data-href="https://page.line.me/656alxeh" target="_blank">＋ 立即加 LINE 諮詢</a>
+    <a class="call-btn" data-href="tel:0965036978">📞 立即撥打專線</a>
   </div>
 
   <footer>
     lu926-max.github.io
   </footer>
+
+  <!-- 🔑 自動日期版 一鍵更新腳本 -->
+  <script>
+    // 產生 YYYYMMDD 當作版本號
+    const d = new Date();
+    const VERSION = d.getFullYear().toString() +
+                    ("0"+(d.getMonth()+1)).slice(-2) +
+                    ("0"+d.getDate()).slice(-2);
+
+    // link/script/a
+    document.querySelectorAll('[data-href]').forEach(el => {
+      const url = el.getAttribute('data-href') + '?v=' + VERSION;
+      if (el.tagName === 'LINK') {
+        const real = document.createElement('link');
+        real.rel = el.rel || 'stylesheet';
+        real.href = url;
+        document.head.appendChild(real);
+      } else if (el.tagName === 'SCRIPT') {
+        const real = document.createElement('script');
+        real.src = url;
+        if (el.defer) real.defer = true;
+        document.body.appendChild(real);
+      } else if (el.tagName === 'A') {
+        el.href = url;
+      }
+    });
+
+    // img
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      img.src = img.getAttribute('data-src') + '?v=' + VERSION;
+    });
+  </script>
 </body>
 </html>
