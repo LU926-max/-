@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,23 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>全台E貸通</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
     header { background: #007bff; color: white; padding: 20px; text-align: center; }
-    section { padding: 20px; max-width: 800px; margin: auto; }
-    h1 { margin: 0; }
-    .services { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #343a40; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+    section { padding: 20px; max-width: 900px; margin: auto; }
+    h2 { color: #333; margin-top: 30px; }
+
+    .services, .steps, .highlights { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 10px; 
+    }
+
+    .box { 
+      background: #f8f9fa; 
+      padding: 15px; 
+      border-radius: 5px; 
+      text-align: center; 
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .steps .box { background: #e9f7ef; border-left: 5px solid #28a745; }
+    .highlights .box { background: #fff3cd; border-left: 5px solid #ffc107; }
+
+    footer { background: #343a40; color: white; text-align: center; padding: 10px; }
     a { text-decoration: none; }
-    .line-btn { display: inline-block; background: #06C755; color: white; font-size: 18px; font-weight: bold; padding: 12px 20px; border-radius: 6px; margin-top: 15px; }
-    .call-btn { display: inline-block; background: #28a745; color: white; font-size: 18px; font-weight: bold; padding: 12px 20px; border-radius: 6px; margin-top: 10px; }
+    .line-btn, .call-btn { display: inline-block; margin: 10px; padding: 12px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; }
+    .line-btn { background: #06C755; color: white; }
+    .call-btn { background: #28a745; color: white; }
+
+    /* CTA 區塊 */
+    .cta { 
+      background: #007bff; 
+      color: white; 
+      text-align: center; 
+      padding: 40px 20px; 
+      margin-top: 30px; 
+      border-radius: 8px;
+    }
+    .cta h2 { color: white; margin-bottom: 15px; }
+    .cta p { font-size: 18px; margin-bottom: 20px; }
   </style>
 </head>
 <body>
   <header>
     <h1>全台E貸通</h1>
-    <p><a href="tel:0965036978" style="color:yellow;">📞 0965-036-978</a> ｜ <a href="https://page.line.me/656alxeh" target="_blank" style="color:yellow;">LINE 線上洽詢</a></p>
-    <a class="line-btn" href="https://page.line.me/656alxeh" target="_blank">➕ 一鍵加入 LINE 好友</a>
+    <a class="line-btn" href="https://page.line.me/656alxeh" target="_blank">＋ 一鍵加入 LINE 好友</a>
     <br>
     <a class="call-btn" href="tel:0965036978">📞 一鍵撥打電話</a>
   </header>
@@ -30,25 +58,54 @@
   <section>
     <h2>服務項目</h2>
     <div class="services">
-      <div class="card">代償高利</div>
-      <div class="card">汽機車借貸</div>
-      <div class="card">警示戶、協商皆可</div>
-      <div class="card">整合負債</div>
-      <div class="card">無薪轉也可</div>
-      <div class="card">房屋土地</div>
-      <div class="card">銀行小白</div>
-      <div class="card">信用貸款</div>
-      
+      <div class="box">房屋土地</div>
+      <div class="box">汽機車借貸</div>
+      <div class="box">警示戶、協商皆可</div>
+      <div class="box">信用貸款</div>
+      <div class="box">無薪轉也可</div>
+      <div class="box">代償高利</div>
+      <div class="box">銀行小白</div>
+      <div class="box">整合債務</div>
     </div>
+
+    <h2>借款流程</h2>
+    <div class="steps">
+      <div class="box">💬 線上詢問</div>
+      <div class="box">📊 免費評估</div>
+      <div class="box">✅ 確認適合方案</div>
+      <div class="box">✍️ 簽約撥款</div>
+      <div class="box">💰 彈性還款</div>
+    </div>
+
+    <h2>利率範圍</h2>
+    <p>💡 費用透明，依政府規範收取，實際以合約為準。</p>
+
+    <h2>特別強調</h2>
+    <div class="highlights">
+      <div class="box">👨‍💼 待業中也能核准</div>
+      <div class="box">📑 同業多查可辦理</div>
+      <div class="box">🏦 當鋪私設可申辦</div>
+      <div class="box">🔒 審核全程保密</div>
+    </div>
+
+    <h2>關於我們</h2>
+    <p>
+      全台E貸通，提供快速、合法、安全的借貸服務。<br>
+      不論您遇到資金周轉、卡債壓力或需要整合貸款，<br>
+      我們都能協助您度過難關。
+    </p>
   </section>
 
-  <section>
-    <h2>關於我們</h2>
-    <p>全台E貸通，提供快速、合法、安全的借貸服務。不論您遇到資金周轉、卡債壓力或需要整合貸款，我們都能協助您度過難關。</p>
-  </section>
+  <!-- CTA 區塊 -->
+  <div class="cta">
+    <h2>立即行動，不再等待！</h2>
+    <p>專人快速回覆，讓您安心解決資金問題</p>
+    <a class="line-btn" href="https://page.line.me/656alxeh" target="_blank">＋ 立即加 LINE 諮詢</a>
+    <a class="call-btn" href="tel:0965036978">📞 立即撥打專線</a>
+  </div>
 
   <footer>
-    <p>📍 全台服務 | <a href="tel:0965036978" style="color:white;">📞 0965-036-978</a> | <a href="https://page.line.me/656alxeh" target="_blank">LINE 連結</a></p>
+    lu926-max.github.io
   </footer>
 </body>
 </html>
